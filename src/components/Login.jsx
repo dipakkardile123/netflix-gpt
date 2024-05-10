@@ -3,7 +3,7 @@ import Header from "./Header";
 import { checkValidData } from "../utils/Validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import {useravtar} from "../utils/Constant"
+import {bgurl, useravtar} from "../utils/Constant"
 import { adduser } from "../utils/Usersclice";
 import { useDispatch } from "react-redux";
 
@@ -87,12 +87,12 @@ const Login = () => {
 
   return (
     <>
-      <div className="absolute h-72 bg-red-500">
         <Header />
+      <div className="absolute h-72 bg-red-500">
+
         <img
           className="h-screen w-screen"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/c1366fb4-3292-4428-9639-b73f25539794/3417bf9a-0323-4480-84ee-e1cb2ff0966b/IN-en-20240408-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt=""
+            src={bgurl}          alt=""
         />
       </div>
       <form
